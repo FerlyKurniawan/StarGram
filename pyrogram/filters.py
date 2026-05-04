@@ -22,7 +22,7 @@ from typing import Callable, Union, List, Pattern
 
 import pyrogram
 from pyrogram import enums
-from pyrogram.types import Message, CallbackQuery, InlineQuery, InlineKeyboardMarkup, ReplyKeyboardMarkup, Update
+from pyrogram.types import Message, CallbackQuery, InlineQuery, InlineKeyboardMarkup, ReplyKeyboardMarkup, Update, ChosenInlineResult
 
 
 class Filter:
@@ -236,6 +236,16 @@ async def forwarded_filter(_, __, m: Message):
 forwarded = create(forwarded_filter)
 """Filter messages that are forwarded."""
 
+
+# endregion
+
+# region reaction_filter
+async def reaction_filter(_, __, m: Message):
+    return bool(m.edit_hide)
+
+
+react = create(reaction_filter)
+"""Filter reactions."""
 
 # endregion
 
@@ -879,7 +889,7 @@ def regex(pattern: Union[str, Pattern], flags: int = 0):
             value = update.text or update.caption
         elif isinstance(update, CallbackQuery):
             value = update.data
-        elif isinstance(update, InlineQuery):
+        elif isinstance(update, (ChosenInlineResult, InlineQuery)):
             value = update.query
         else:
             raise ValueError(f"Regex filter doesn't work with {type(update)}")
