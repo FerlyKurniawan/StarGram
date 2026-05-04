@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: Navygram
-Version: 2.0.180
+Version: 2.0.211
 Summary: Elegant, modern and asynchronous Telegram MTProto API framework in Python for users and bots
 Home-page: https://github.com/navycodes/pyrogram
 Download-URL: https://github.com/navycodes/pyrogram/releases/latest
