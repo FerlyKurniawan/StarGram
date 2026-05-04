@@ -1,16 +1,12 @@
 Metadata-Version: 2.4
-Name: Navygram
-Version: 2.0.180
-Summary: Elegant, modern and asynchronous Telegram MTProto API framework in Python for users and bots
-Home-page: https://github.com/navycodes/pyrogram
-Download-URL: https://github.com/navycodes/pyrogram/releases/latest
-Author: Dan
-Author-email: dan@pyrogram.org
+Name: pyrogram-navy
+Version: 2.0.210
+Summary: Elegant, modern and asynchronous Telegram MTProto API framework in Python for users and bots (Navy Fork)
+Home-page: https://github.com/navycodes/pyrogram-navy
+Download-URL: https://github.com/navycodes/pyrogram-navy/releases/latest
+Author: deylin
+Author-email: deylinarea@gmail.com
 License: LGPLv3
-Project-URL: Tracker, https://github.com/pyrogram/pyrogram/issues
-Project-URL: Community, https://t.me/pyrogram
-Project-URL: Source, https://github.com/pyrogram/pyrogram
-Project-URL: Documentation, https://docs.pyrogram.org
 Keywords: telegram chat messenger mtproto api client library python
 Classifier: Development Status :: 5 - Production/Stable
 Classifier: Intended Audience :: Developers
@@ -36,16 +32,13 @@ Classifier: Topic :: Communications :: Chat
 Classifier: Topic :: Software Development :: Libraries
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
-Requires-Python: ~=3.7
+Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: COPYING
 License-File: COPYING.lesser
 License-File: NOTICE
 Requires-Dist: pyaes==1.6.1
 Requires-Dist: pysocks==1.7.1
-Requires-Dist: meval
-Requires-Dist: anyio
-Requires-Dist: pytz
 Dynamic: author
 Dynamic: author-email
 Dynamic: classifier
@@ -56,7 +49,6 @@ Dynamic: home-page
 Dynamic: keywords
 Dynamic: license
 Dynamic: license-file
-Dynamic: project-url
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
